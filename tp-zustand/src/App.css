@@ -1,0 +1,49 @@
+/* Estilos generales adicionales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* Modificando el estilo de los mensajes de SweetAlert2 */
+.swal2-popup {
+  border-radius: 16px !important;
+  padding: 2rem !important;
+}
+
+.swal2-title {
+  color: var(--text-color) !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.swal2-confirm {
+  background-color: var(--primary-color) !important;
+  border-radius: 8px !important;
+}
+
+.swal2-cancel {
+  background-color: var(--danger-color) !important;
+  border-radius: 8px !important;
+}

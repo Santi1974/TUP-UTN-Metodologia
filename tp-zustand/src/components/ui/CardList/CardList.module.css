@@ -1,0 +1,212 @@
+.containerCardList {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 1.8rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.containerCardList:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.taskInfo {
+  flex: 1;
+}
+
+.taskInfo h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.taskInfo p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.taskInfo b {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  background-color: rgba(108, 92, 231, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+
+.actionTab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-left: 1.5rem;
+}
+
+.actionTab button {
+  min-width: 110px;
+  text-align: center;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionTab button:first-child {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.actionTab button:first-child:hover {
+  background-color: var(--danger-light);
+}
+
+.actionTab button:last-child {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.actionTab button:last-child:hover {
+  background-color: var(--primary-light);
+}
+
+@media (max-width: 576px) {
+  .containerCardList {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .actionTab {
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .actionTab button {
+    flex: 1;
+  }
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.taskHeader h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.taskActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton,
+.deleteButton {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: none;
+}
+
+.editButton:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+  transform: none;
+}
+
+.deleteButton:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  transform: none;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+}
+
+.taskFooter {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  background-color: rgba(37, 99, 235, 0.05);
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.deadlineIcon {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .cardContent {
+    padding: 1.25rem;
+  }
+
+  .taskHeader h3 {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
