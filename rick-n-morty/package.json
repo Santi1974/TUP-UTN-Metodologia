@@ -1,0 +1,12 @@
+{
+  "name": "rick-and-morty-api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "live-server --no-browser",
+    "build": "echo 'no build script'"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
